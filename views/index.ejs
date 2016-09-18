@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Главная страница</title>
+<meta charset="utf-8" />
+<link rel="shortcut icon" href="/images/student.ico">
+<link rel="stylesheet" href="/index/assets/css/main.css" />
+</head>
+<body>
+	<script>$('body').hide('fast');</script>
+<% if (messages.loginError) {%>
+		<p class="error"><%= messages.loginError %></p>
+		<script>
+                            	location="http://m1shaowned-m1shaowned.c9.io/authorization"; 
+                            </script>
+<% } %>
+	<% if (messages.loginSucces) {%>
+		<p class="error"><%= messages.loginSucces %></p> 
+		<script>
+			location="http://m1shaowned-m1shaowned.c9.io" 
+		</script>
+	<% } %>
+  <section id="header">
+    <header>
+    	 <% if (user == null) { %>
+			  <span class="image avatar"><img src="/index/images/default_avatar.png" alt="Аватарка" /></span>
+			  <h1>Приветствуем тебя!</h1>
+			  <p><a href="authorization" class="logout">Авторизация</a></p>
+			  <p><a href="registration" class="logout">Регистрация</a></p>
+	 <% } %>
+	 <% if (user != null) { %>
+	 	<% if (user.login == 'admin') {%>
+	  		<span class="image avatar"><img src="/index/images/admin.jpg" alt="Аватарка Админа" /></span>
+	 	<% } %>
+	 	<% if (user.login != 'admin') {%>
+	  		<span class="image avatar"><img src="/index/images/student.png" alt="Аватарка" /></span>
+	  	<% } %>
+	  		<h1>Добрый день,<span>  <%= user.login  %> </span></h1> <br>
+	  		<a href="/logout" method="post" class="logout" action="/" value="">Выйти</a>
+	 <% } %>
+	</header>
+	<nav id="nav">
+	  <ul>
+	    <li><a href="#one" class="active">Наверх</a></li>
+		<li><a href="#two">Составляющая курсов</a></li>
+		<li><a href="#three">Используемые технологии</a></li>
+		<li><a href="#four">Требования к студентам</a></li>
+	<% if (user != null) { %>
+	        	<li><a href="/chat">Онлайн чат</a></li>
+	<% } %>
+	  </ul>
+	</nav>
+  </section>
+
+  <!-- Оболочка -->
+  <div id="wrapper">
+
+  <!-- Основный -->
+    <div id="main">
+
+	  <!-- #one -->
+	  <section id="one">
+	    <div class="container">
+		  <header class="major">
+		    <h2>Интерактивный онлайн курс по обучению элементу HTML5 Canvas</h2>
+			<p>Разрабатывается исключительно на чистом энтузиазме ! :)</p>
+		  </header>
+		 <!--<h3>Почему стоит обучаться именно на нашем портале?</h3>-->
+		 <!--<p>Ниже приведен ряд аргументов, прочитав которые Вы сможете сделать вывод о качестве этого ресурса, и принять решение о том, когда Вы приступите к обучению ;)</p>-->
+		</div>
+	  </section>
+<!-- <p>Качественные, наглядные и затягивающие курсы, которые основаны на постоянной практике, например такой как делать по-шаблону ,тут всё иначе. Мы посторались максимально сделать ваше обучение для вас оптимальным в основных аспектах  интерактивные интерфейсы. </br> Вы не заставите себя скучать, обучаясь на нашем ресурсе! :)</p> -->
+	  <!-- #two -->
+	  <section id="two">
+	    <div class="container">
+		  <h3>Составляющая курсов</h3>
+		  <p>Преимущества нашего курса заключается в уникальном наборе полезных, и в тоже время - приятных элементов:</p>
+		  <ul class="feature-icons">
+		    <li class="fa-code">Готовый код для работы</li>
+			<li class="fa-cubes">Актуальность тем</li>
+			<li class="fa-book">Легко усваиваемая теория</li>
+			<li class="fa-coffee">Обучаться можно за чашкой кофе</li>
+			<li class="fa-bolt">Гибридный подход к обучению</li>
+			<li class="fa-users">Полное отсутствие рекламы</li>
+		  </ul>
+		</div>
+	  </section>
+
+	  <!-- #three -->
+	  <section id="three">
+	    <div class="container">
+		  <h3>Используемые технологии</h3>
+		  <p>Перечень и определения технологий, которыми Вы будете пользоваться во время обучения:</p>
+		  <div class="features">
+		    <article>
+			  <div class="image"><img src="/index/images/html5.png" alt="HTML5" /></div>
+			  <div class="inner">
+			    <h4 class="xm">HTML5</h4>
+			    	<p>Язык для структурирования и представления содержимого всемирной паутины. Это пятая версия HTML.</p>
+		<div class="hide html5info">
+				<p>В HTML5 реализовано множество новых синтаксических особенностей. Например, элементы <video>, <audio> и <canvas>, а также возможность использования SVG и математических формул. Эти новшества разработаны для упрощения создания и управления графическими и мультимедийными объектами в сети без необходимости использования сторонних API и плагинов. Другие новые элементы, такие как <section>, <article>, <header> и <nav>, разработаны для того, чтобы обогащать семантическое содержимое документа (страницы). Новые атрибуты были введены с той же целью, хотя ряд элементов и атрибутов был удалён. Некоторые элементы, например <a>, <menu> и <cite>, были изменены, переопределены или стандартизированы. API и DOM стали основными частями спецификации HTML5[5]. HTML5 также определяет некоторые особенности обработки ошибок вёрстки, поэтому синтаксические ошибки должны рассматриваться одинаково всеми совместимыми браузерами[6].</p>
+		</div>
+			</div>
+			</article>
+			<article>
+			  <div class="image"><img src="/index/images/canvas.png" alt="Canvas" /></div>
+			  <div class="inner">
+			    <h4>Canvas</h4>
+				<p>Элемент HTML5, предназначенный для создания растрового двухмерного изображения при помощи скриптов, обычно на языке Java-script.</p>
+			  </div>
+			</article>
+			<article>
+			  <div class="image"><img src="/index/images/javascript.png" alt="Java-script" /></div>
+			  <div class="inner">
+			    <h4>Java-script</h4>
+				<p>Сценарный язык программирования, который базируется на объектном представлении браузера. Он используется для того, чтобы придать сайту больше интерактивности по сравнению с обычным статичным HTML-документом</p>
+			  </div>
+			</article>
+		  </div>
+		</div>
+	  </section>
+
+	  <!-- #four -->
+	  <section id="four">
+	   <div class="container">
+		  
+          <section>
+			<h3>Требования к студентам</h3>
+			<h5>Полное описание:</h5>
+			<blockquote>Самое главное требование - это ваше желание уделять время для своего развития, но и при этом - необходимы фундаментальные знания для обучения на этом портале: <br> <br>
+			<li>Базовые знания html + css;</li> 
+			<li>Базовые знания языков программирования (желательно Java-script);</li>
+			<li>Умение работать с алгоритмами (разработка и применение)</li><br>
+			Не маловажным фактором является наличие умения воспринимать любой тип информации и работать на бесплатном ресурсе, по скольку, объем информации на подобных порталах ничем не уступает платным ресурсам. <br>
+			Затраченное время на нашем портале Вы инвестируете в свое будущее, не стоит пренебрегать этим явлением.</blockquote>
+			<h5>Краткое описание (для опытных):</h5>
+			<pre><code>
+if ((know_programming_language == 1) || (have_html_skills == 1 && have_css_skills == 1))
+{
+	YouCanLearnHere ();
+}
+else
+{
+	YouNeedToGetReadyForTrainingHere ();
+}
+	
+
+            </code></pre>
+		  </section>
+	  </div>
+	  </section>
+
+  </div>
+
+  <!-- Подвал -->
+  <section id="footer">
+    <div class="container">
+	  <ul class="copyright">
+	    <li>Powered by <a href="https://vk.com/m1shaowned">Mikhail Owned</a> and <a href="https://vk.com/oleg_vudu">Oleg Makovchik</a></li>
+	  </ul>
+    </div>
+  </section>
+
+</div>
+
+<script src="/index/js/jquery-2.1.3.js"></script>
+<script src="/index/js/jquery.min.js"></script>
+<script src="/index/js/jquery.scrollzer.min.js"></script>
+<script src="/index/js/jquery.scrolly.min.js"></script>
+<script src="/index/js/skel.min.js"></script>
+<script src="/index/js/util.js"></script>
+<script src="/index/js/main.js"></script>
+<script src="/js/script.js"></script>
+</body>
+</html>

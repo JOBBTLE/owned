@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="/images/student.ico">
+	<link rel="stylesheet" type="text/css" href="/registration/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/registration/css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="/registration/css/component.css" />
+	 <title>Авторизация</title>
+</head>
+<body>
+	<% if (user!=null) { %>
+	<p class ="error">Вы уже авторизоварны, и не сможете повторить процедуру</p>
+                            <script>
+	                            function GoNah(){ 
+	                            location="https://m1shaowned-m1shaowned.c9.io"; 
+	                                          } 
+	                            setTimeout( 'GoNah()', 3000 ); 
+                            </script>
+                <% } %>
+              <% if (user==null) { %>
+              <section>
+              <h1>Авторизация</h1>
+              <div id="container_auth">
+	              <form method="post" action="/login">
+		<label for ="login">Логин</label>
+		<input name="login" type="login" required>
+		<label for ="password">Пароль</label>
+		<input name="password" type="password"required>
+			<div id="lower">
+				<input type="checkbox"><label class="check" for="checkbox">Запомнить меня</label>
+				<input type="submit" value="Войти">
+				<p><a href="https://vk.com/m1shaowned">Забыли пароль?</a></p>
+		              </div>
+		</form>
+               </div>
+               <% } %>
+               </section>
+</body>
+</html>

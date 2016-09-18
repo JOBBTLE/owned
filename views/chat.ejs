@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<body class="langru-ru ny ">
+    <meta charset="utf-8" />
+  <link rel="stylesheet" href="/chat/css/chat.css">
+    <link rel="stylesheet" href="/chat/css/bootstrap.css">
+	 <link rel="shortcut icon" href="/images/student.ico">
+	 <title>Онлайн чат</title>
+  </head>
+  <body>
+      <% if (user != null) {%>
+       <h2 id="people" class="unstyled"></h2>
+        <ul id="msgs" class="unstyled"></ul>
+        <div class="span5 offset2" id="login">
+          <form class="form-inline">
+          <input type="text" class-"input-small" id="name"  value="<%=user.login %>" disabled>
+            <input type="button" name="join" id="join" value="Присоединиться к чату" class="brn brn-primary">
+          </form>
+        </div>
+        <div class="span5 offset2" id="chat">
+        <form id="2" class="form-inline">
+                      <input type="text" class="input" placeholder="Ваше сообщение" id="msg">
+          <input type="button" name="send" id="send" value="Отправить" class="btn btn-success">
+        </form>
+      </div>
+        <% } else { %>
+        <div class="error"> <a href="/authorization"><h1>Авторизируйтесь для того, чтобы подключиться к чату!</h1> </a> </div>
+        <script>
+                            function GoNah(){ 
+                            location="https://m1shaowned-m1shaowned.c9.io"; 
+                                          } 
+                            setTimeout( 'GoNah()', 5000 ); 
+                            </script>
+        <% } %>
+      <script src="/chat/js/socket.io.js"></script>
+    <script src="/chat/js/jquery-2.1.3.js"></script>
+    <script src="/chat/js/chat.js"></script>
+  </body>
+</html>

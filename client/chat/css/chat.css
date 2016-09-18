@@ -1,0 +1,56 @@
+.error
+	{
+		text-align: center;
+		margin-top: 20%;
+		font-size: 20px;	
+	}
+li{
+  color: orange;
+}
+#menu
+{
+  width: 240px; /*высота*/
+  float: right; /*расположение*/
+  background:blue; /*цвет фона меню*/
+  height: 500px; /*ширина*/
+}
+
+#mainmenu {
+    position: relative;
+    overflow:hidden;
+    height:50px;
+    margin:30px
+}
+#mainmenu ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    position: relative;
+    left:30%;
+    float:left;
+    font:14px Arial, Helvetica, sans-serif;
+    height:30px
+    
+}
+#mainmenu ul li {
+    position:relative;
+    left:-50%;
+    float:left;
+    margin:0 5px;
+    height:30px
+    
+}
+#mainmenu ul li a {
+  background:yellow; /*цвет фона меню*/
+    display:block;
+    text-decoration:none;
+    padding:4px 10px
+}
+#mainmenu ul li a:hover {
+    background-color:#444;
+    color:#ffffff
+}
+body
+{
+       background-color: black;
+}
